@@ -1,5 +1,7 @@
 # Opal
 
+![Opal — light (left) and dark (right)](screenshot.png)
+
 A comprehensive, accessibility-checked theme for Obsidian, with a dual light/dark flavour and ~82 Style Settings controls. Opal descends from the Catppuccin Mocha lineage but re-tunes every hue into a muted-macaron palette with zero-duplication element roles, and covers reading view **and** Live Preview at parity.
 
 一套「集大成」的 Obsidian 主题：浅深双 flavour、约 82 个 Style Settings 可调项、阅读态与实时预览同等覆盖，配色经过 WCAG 对比度核算。源自 Catppuccin Mocha，但把每个色相重新调成柔和马卡龙盘，元素角色零重复。
