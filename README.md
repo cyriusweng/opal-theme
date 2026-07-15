@@ -1,4 +1,4 @@
-# Opal Theme
+# Opal
 
 A comprehensive, accessibility-checked theme for Obsidian, with a dual light/dark flavour and ~82 Style Settings controls. Opal descends from the Catppuccin Mocha lineage but re-tunes every hue into a muted-macaron palette with zero-duplication element roles, and covers reading view **and** Live Preview at parity.
 
