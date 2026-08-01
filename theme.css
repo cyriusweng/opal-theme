@@ -1163,12 +1163,12 @@ body {
    5. Callout：融合默认 + 26 类型语义色 + 皮肤
    ===================================================================== */
 .callout{
-  background:var(--o-base);border:0;border-left:3px solid rgb(var(--callout-color));
+  background:var(--o-base);border:0;border-left:3px solid var(--callout-color);
   border-radius:var(--radius-s) var(--radius-m) var(--radius-m) var(--radius-s);
   box-shadow:0 1px 2px rgba(0,0,0,.18),0 6px 16px -8px rgba(0,0,0,.28);
 }
-@supports (background: color-mix(in oklab, red, blue)){.callout{background:color-mix(in oklab,rgb(var(--callout-color)) 6%,var(--o-base))}}
-.callout-title,.callout-icon{color:rgb(var(--callout-color))}
+@supports (background: color-mix(in oklab, red, blue)){.callout{background:color-mix(in oklab,var(--callout-color) 6%,var(--o-base))}}
+.callout-title,.callout-icon{color:var(--callout-color)}
 .callout[data-callout="info"],.callout[data-callout="todo"]{--callout-color:var(--o-cc-blue)}
 .callout[data-callout="tip"],.callout[data-callout="hint"],.callout[data-callout="important"]{--callout-color:var(--o-cc-teal)}
 .callout[data-callout="success"],.callout[data-callout="check"],.callout[data-callout="done"]{--callout-color:var(--o-cc-green)}
@@ -1186,12 +1186,12 @@ body {
 .callout[data-callout="危险"],.callout[data-callout="错误"],.callout[data-callout="失败"],.callout[data-callout="缺陷"],.callout[data-callout="故障"]{--callout-color:var(--o-cc-rose)}
 .callout[data-callout="示例"],.callout[data-callout="例子"]{--callout-color:var(--o-cc-orchid)}
 .callout[data-callout="引用"],.callout[data-callout="引文"]{--callout-color:var(--o-cc-cyan)}
-.opal-co-brutal .callout{border:2px solid rgb(var(--callout-color));border-radius:4px;box-shadow:4px 4px 0 rgb(var(--callout-color));background:var(--o-base)}
-.opal-co-outline .callout{background:transparent;border:var(--o-bw) solid color-mix(in oklab,rgb(var(--callout-color)) 55%,var(--o-surface1));box-shadow:none}
-.opal-co-glow .callout{box-shadow:0 0 12px -2px rgb(var(--callout-color)),inset 0 0 10px -6px rgb(var(--callout-color))}
+.opal-co-brutal .callout{border:2px solid var(--callout-color);border-radius:4px;box-shadow:4px 4px 0 var(--callout-color);background:var(--o-base)}
+.opal-co-outline .callout{background:transparent;border:var(--o-bw) solid color-mix(in oklab,var(--callout-color) 55%,var(--o-surface1));box-shadow:none}
+.opal-co-glow .callout{box-shadow:0 0 12px -2px var(--callout-color),inset 0 0 10px -6px var(--callout-color)}
 .opal-co-bar .callout{padding-left:0;border-left:0;overflow:hidden}
-.opal-co-bar .callout-title{background:rgb(var(--callout-color));color:var(--o-base);padding:5px 12px}
-.opal-co-paper .callout{border:0;box-shadow:0 2px 6px -2px rgba(0,0,0,.3);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);background:color-mix(in oklab,rgb(var(--callout-color)) 7%,var(--o-mantle))}
+.opal-co-bar .callout-title{background:var(--callout-color);color:var(--o-base);padding:5px 12px}
+.opal-co-paper .callout{border:0;box-shadow:0 2px 6px -2px rgba(0,0,0,.3);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);background:color-mix(in oklab,var(--callout-color) 7%,var(--o-mantle))}
 
 /* =====================================================================
    6. 复选框 / 任务（收进 :not(.opal-tasks-native) 便于回退）
@@ -1550,7 +1550,7 @@ body:not(.opal-tasks-native) .HyperMD-task-line[data-task="*"] .task-list-item-c
   .opal-pf-mono .markdown-rendered{font-family:var(--o-fallback-mono)}
   .opal-pa-justify .markdown-rendered p{text-align:justify;text-indent:2em;hyphens:auto}
   .opal-pa-left .markdown-rendered p{text-align:left;text-indent:0}
-  body:not(.opal-print-dark) .callout{box-shadow:none!important;background:#fff!important;border:1px solid #bbb!important;border-left:3px solid rgb(var(--callout-color))!important}
+  body:not(.opal-print-dark) .callout{box-shadow:none!important;background:#fff!important;border:1px solid #bbb!important;border-left:3px solid var(--callout-color)!important}
   .markdown-rendered :is(h1,h2,h3,h4,h5,h6){break-after:avoid;background-image:none!important}
   body:not(.opal-print-dark) .markdown-rendered :is(h1,h2,h3,h4,h5,h6){filter:saturate(.7) brightness(.55)}
   .markdown-rendered p,.markdown-rendered li{orphans:2;widows:2}
