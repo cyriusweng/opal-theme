@@ -1244,8 +1244,8 @@ body:not(.opal-tasks-native) .task-list-item[data-task="9"] > input.task-list-it
 /* Canvas：底色/点阵走原生变量（不自绘，避免和 Obsidian 点阵重影）；卡片 squircle + 语义左条；
    6 号预设色映射 Opal（注意 --canvas-color 用逗号三元组，供 rgb()/rgba() legacy 语法）；编组框靛蓝虚线 */
 .canvas-wrapper{--canvas-background:var(--o-mantle);--canvas-dot-pattern:var(--o-surface1)}
-.theme-dark .canvas-wrapper{--canvas-color-1:240,138,160;--canvas-color-2:242,174,123;--canvas-color-3:235,208,138;--canvas-color-4:146,219,168;--canvas-color-5:130,207,230;--canvas-color-6:192,162,240}
-.theme-light .canvas-wrapper{--canvas-color-1:177,58,86;--canvas-color-2:148,86,29;--canvas-color-3:123,98,20;--canvas-color-4:40,114,68;--canvas-color-5:14,110,130;--canvas-color-6:123,71,192}
+.theme-dark .canvas-wrapper{--canvas-color-1:rgb(240,138,160);--canvas-color-2:rgb(242,174,123);--canvas-color-3:rgb(235,208,138);--canvas-color-4:rgb(146,219,168);--canvas-color-5:rgb(130,207,230);--canvas-color-6:192,162,240}
+.theme-light .canvas-wrapper{--canvas-color-1:rgb(177,58,86);--canvas-color-2:rgb(148,86,29);--canvas-color-3:rgb(123,98,20);--canvas-color-4:rgb(40,114,68);--canvas-color-5:rgb(14,110,130);--canvas-color-6:123,71,192}
 .canvas-node-container{border-radius:var(--radius-m);border-left:3px solid rgb(var(--canvas-color,126,126,126))}
 @supports (corner-shape: superellipse(1.2)){.opal-corner-squircle .canvas-node-container{corner-shape:var(--o-cshape)}}
 .canvas-node-label{color:var(--o-subtext0)}
