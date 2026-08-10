@@ -1,5 +1,5 @@
 /* =====================================================================
-   Opal Theme  ·  v2.0（满配：约 90 个可调控件 + 界面线条/边框全覆盖）
+   Opal Theme  ·  v2.1.2（约 82 个可调控件 + 界面线条/边框全覆盖）
    Opal 配色（浅深双 flavour）+ 559 主题精华。
    轴一：审美路线（class-select）。轴二：自定义输入与数值微调（本版补齐）。
    健壮性：每个变量项都带默认兜底；@supports / reduced-motion / reduced-transparency / 打印复位。
@@ -11,13 +11,16 @@ id: opal-theme
 settings:
   -
     id: opal-h-color
-    title: 配色
+    title: "Colours"
+    title.zh: "配色"
     type: heading
     level: 1
   -
     id: opal-accent
-    title: 主强调色
-    description: 链接、选中、焦点等核心交互色。
+    title: "Primary accent colour"
+    title.zh: "主强调色"
+    description: "The main interaction colour for links, selections, and focus states."
+    description.zh: "链接、选中、焦点等核心交互色。"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -25,8 +28,10 @@ settings:
     default-dark: '#8098FF'
   -
     id: opal-accent-2
-    title: 副强调色
-    description: 第二强调色，用于次级高亮、渐变的另一端。默认青。
+    title: "Secondary accent colour"
+    title.zh: "副强调色"
+    description: "A secondary accent used for supporting highlights and the other end of gradients. Defaults to teal."
+    description.zh: "第二强调色，用于次级高亮、渐变的另一端。默认青。"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -34,8 +39,10 @@ settings:
     default-dark: '#82D9C8'
   -
     id: opal-accent-saturation
-    title: 强调色鲜艳度
-    description: 1=原样，小于 1 更灰更沉，大于 1 更艳。老引擎不支持时自动忽略。
+    title: "Accent saturation"
+    title.zh: "强调色鲜艳度"
+    description: "1 keeps the original colour. Lower values are greyer and quieter; higher values are more vivid. Older engines ignore this setting."
+    description.zh: "1=原样，小于 1 更灰更沉，大于 1 更艳。老引擎不支持时自动忽略。"
     type: variable-number-slider
     default: 1
     min: 0.4
@@ -43,8 +50,10 @@ settings:
     step: 0.05
   -
     id: opal-tone-light
-    title: 浅色底色温
-    description: 给浅色背景掺入的色调（暖灰选桃、冷灰选蓝、紫灰选紫）。要配合下面的强度才生效。
+    title: "Light theme tint"
+    title.zh: "浅色底色温"
+    description: "The tint mixed into light backgrounds. Choose peach for warm grey, blue for cool grey, or violet for purple-grey. The strength setting below controls the amount."
+    description.zh: "给浅色背景掺入的色调（暖灰选桃、冷灰选蓝、紫灰选紫）。要配合下面的强度才生效。"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -52,8 +61,10 @@ settings:
     default-dark: '#EDEFF4'
   -
     id: opal-tone-dark
-    title: 深色底色温
-    description: 给深色背景掺入的色调。要配合下面的强度才生效。
+    title: "Dark theme tint"
+    title.zh: "深色底色温"
+    description: "The tint mixed into dark backgrounds. The strength setting below controls the amount."
+    description.zh: "给深色背景掺入的色调。要配合下面的强度才生效。"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -61,8 +72,10 @@ settings:
     default-dark: '#20232E'
   -
     id: opal-tone-strength
-    title: 底色温强度
-    description: 上面色温掺进背景的比例。0=纯中性灰（默认），越大染色越明显。
+    title: "Background tint strength"
+    title.zh: "底色温强度"
+    description: "How much of the selected tint is mixed into backgrounds. 0 gives neutral grey; higher values add more colour."
+    description.zh: "上面色温掺进背景的比例。0=纯中性灰（默认），越大染色越明显。"
     type: variable-number-slider
     default: 0
     min: 0
@@ -71,8 +84,10 @@ settings:
     format: '%'
   -
     id: opal-surface-contrast
-    title: 面板分层强度
-    description: 侧栏/卡片这些「面」相对正文背景的明暗差。100=正常分层（默认），越小越扁平、越贴近背景。
+    title: "Surface contrast"
+    title.zh: "面板分层强度"
+    description: "The brightness difference between the document background and surfaces such as sidebars and cards. 100 gives the normal layering; lower values look flatter."
+    description.zh: "侧栏/卡片这些「面」相对正文背景的明暗差。100=正常分层（默认），越小越扁平、越贴近背景。"
     type: variable-number-slider
     default: 100
     min: 40
@@ -81,7 +96,8 @@ settings:
     format: '%'
   -
     id: opal-code-bg
-    title: 代码块底色
+    title: "Code block background"
+    title.zh: "代码块底色"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -89,8 +105,10 @@ settings:
     default-dark: '#2B2F3C'
   -
     id: opal-mark-bg
-    title: 高亮主色
-    description: 荧光笔高亮的基准色（波浪线/辉光都取自它）。
+    title: "Highlight colour"
+    title.zh: "高亮主色"
+    description: "The base colour used by text highlights, including wave underlines and glow effects."
+    description.zh: "荧光笔高亮的基准色（波浪线/辉光都取自它）。"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -98,99 +116,116 @@ settings:
     default-dark: '#EBD08A'
   -
     id: opal-mark-style
-    title: 高亮风格
-    description: 霓虹波浪=波浪下划线+辉光（默认）。纯色底=传统荧光块。柔和底=淡色块。裁字=只给字上色。
+    title: "Highlight style"
+    title.zh: "高亮风格"
+    description: "Neon wave uses a wavy underline and glow. Solid gives a traditional marker block. Soft uses a pale fill. Neon text colours the glyphs only."
+    description.zh: "霓虹波浪=波浪下划线+辉光（默认）。纯色底=传统荧光块。柔和底=淡色块。裁字=只给字上色。"
     type: class-select
     allowEmpty: false
     default: opal-mark-wave
     options:
-      - label: 霓虹波浪
+      - label: "Neon wave / 霓虹波浪"
         value: opal-mark-wave
-      - label: 纯色底块
+      - label: "Solid highlight / 纯色底块"
         value: opal-mark-fill
-      - label: 柔和底块
+      - label: "Soft highlight / 柔和底块"
         value: opal-mark-soft
-      - label: 霓虹裁字
+      - label: "Neon text / 霓虹裁字"
         value: opal-mark-text
   -
     id: opal-heading-scheme
-    title: 标题配色
-    description: 彩虹多色=每级一色（默认）。同色渐变=一色族由亮到暗。单色=都用主色。逐级自定=用下面 6 个色钮。关闭=退回正文色。
+    title: "Heading colour scheme"
+    title.zh: "标题配色"
+    description: "Rainbow gives each level its own colour. Monochrome uses one colour family from light to dark. Single accent uses the primary accent throughout. Custom uses the six colour controls below. Plain returns headings to the body colour."
+    description.zh: "彩虹多色=每级一色（默认）。同色渐变=一色族由亮到暗。单色=都用主色。逐级自定=用下面 6 个色钮。关闭=退回正文色。"
     type: class-select
     allowEmpty: false
     default: opal-h-rainbow
     options:
-      - label: 彩虹多色
+      - label: "Rainbow / 彩虹多色"
         value: opal-h-rainbow
-      - label: 同色渐变
+      - label: "Monochrome gradient / 同色渐变"
         value: opal-h-mono
-      - label: 单色
+      - label: "Single accent / 单色"
         value: opal-h-single
-      - label: 逐级自定
+      - label: "Custom by level / 逐级自定"
         value: opal-h-custom
-      - label: 关闭分级上色
+      - label: "Body text colour / 关闭分级上色"
         value: opal-h-plain
   -
     id: opal-tag-scheme
-    title: 标签配色
-    description: 首字母伪哈希=按标签首字母散成 26 色（默认）。语义=只给紧急/完成等词库上色，其余统一。单色=统一。
+    title: "Tag colour scheme"
+    title.zh: "标签配色"
+    description: "First-letter pseudo-hash distributes tags across 26 colours. Semantic mode assigns colours to recognised status words such as urgent and done. Single colour uses one colour for every tag."
+    description.zh: "首字母伪哈希=按标签首字母散成 26 色（默认）。语义=只给紧急/完成等词库上色，其余统一。单色=统一。"
     type: class-select
     allowEmpty: false
     default: opal-tag-hash
     options:
-      - label: 首字母伪哈希
+      - label: "First-letter pseudo-hash / 首字母伪哈希"
         value: opal-tag-hash
-      - label: 语义词库
+      - label: "Semantic keywords / 语义词库"
         value: opal-tag-semantic
-      - label: 单色统一
+      - label: "Single colour / 单色统一"
         value: opal-tag-mono
   -
     id: opal-unresolved-link
-    title: 未创建笔记的链接样式
-    description: 指向还不存在笔记的链接怎么显示。虚线（默认）/ 变灰 / 模糊 / 加问号角标。
+    title: "Unresolved link style"
+    title.zh: "未创建笔记的链接样式"
+    description: "Choose how links to notes that have not been created appear: dashed underline, muted, blurred, or with a question badge."
+    description.zh: "指向还不存在笔记的链接怎么显示。虚线（默认）/ 变灰 / 模糊 / 加问号角标。"
     type: class-select
     allowEmpty: false
     default: opal-unres-dash
     options:
-      - label: 虚线下划
+      - label: "Dashed underline / 虚线下划"
         value: opal-unres-dash
-      - label: 变灰
+      - label: "Muted / 变灰"
         value: opal-unres-dim
-      - label: 模糊
+      - label: "Blurred / 模糊"
         value: opal-unres-blur
-      - label: 问号角标
+      - label: "Question badge / 问号角标"
         value: opal-unres-badge
   -
     id: opal-h-font
-    title: 字体
+    title: "Fonts"
+    title.zh: "字体"
     type: heading
     level: 1
   -
     id: opal-font-text
-    title: 正文字体
-    description: 填字体名即可（多个用英文逗号隔开）。把 Inter 换成你要的，如 Beiruti。后面自动接系统中文兜底。
+    title: "Body font"
+    title.zh: "正文字体"
+    description: "Enter a font name, or separate several names with commas. For example, replace Inter with Beiruti. Opal appends system CJK fallback fonts automatically."
+    description.zh: "填字体名即可（多个用英文逗号隔开）。把 Inter 换成你要的，如 Beiruti。后面自动接系统中文兜底。"
     type: variable-text
     default: Inter
   -
     id: opal-font-heading
-    title: 标题字体
-    description: 标题专用字体。留 Inter 或换成你的展示字体。
+    title: "Heading font"
+    title.zh: "标题字体"
+    description: "The font used for headings. Keep Inter or enter a display font."
+    description.zh: "标题专用字体。留 Inter 或换成你的展示字体。"
     type: variable-text
     default: Inter
   -
     id: opal-font-code
-    title: 代码/等宽字体
+    title: "Code / monospace font"
+    title.zh: "代码/等宽字体"
     type: variable-text
     default: JetBrains Mono
   -
     id: opal-font-ui
-    title: 界面字体
-    description: 侧栏、菜单、标签页等界面文字的字体。
+    title: "Interface font"
+    title.zh: "界面字体"
+    description: "The font used in sidebars, menus, tabs, and other interface elements."
+    description.zh: "侧栏、菜单、标签页等界面文字的字体。"
     type: variable-text
     default: Inter
   -
     id: opal-font-size
-    title: 正文字号
+    title: "Body font size"
+    title.zh: "正文字号"
     type: variable-number-slider
     default: 16
     min: 12
@@ -199,7 +234,8 @@ settings:
     format: px
   -
     id: opal-line-height
-    title: 正文行高
+    title: "Body line height"
+    title.zh: "正文行高"
     type: variable-number-slider
     default: 1.5
     min: 1.2
@@ -207,7 +243,8 @@ settings:
     step: 0.05
   -
     id: opal-letter-spacing
-    title: 正文字间距
+    title: "Body letter spacing"
+    title.zh: "正文字间距"
     type: variable-number-slider
     default: 0
     min: -0.5
@@ -216,24 +253,30 @@ settings:
     format: px
   -
     id: opal-uncolored-bold
-    title: 粗体不上色
-    description: 默认粗体是桃色。打开后粗体回退成正文色，只加粗不变色。
+    title: "Uncoloured bold text"
+    title.zh: "粗体不上色"
+    description: "Bold text is peach by default. Enable this to keep the body colour and change weight only."
+    description.zh: "默认粗体是桃色。打开后粗体回退成正文色，只加粗不变色。"
     type: class-toggle
     default: false
   -
     id: opal-font-features
-    title: 代码字体特性
-    description: 高级项。填 OpenType 特性，如 "liga" 1, "calt" 1 开连字，"zero" 1 斜杠零。留 normal 则默认。
+    title: "Code font features"
+    title.zh: "代码字体特性"
+    description: "Advanced. Enter OpenType features such as \"liga\" 1, \"calt\" 1 for ligatures, or \"zero\" 1 for a slashed zero. Keep normal for the font default."
+    description.zh: "高级项。填 OpenType 特性，如 \"liga\" 1, \"calt\" 1 开连字，\"zero\" 1 斜杠零。留 normal 则默认。"
     type: variable-text
     default: normal
   -
     id: opal-h-heading
-    title: 标题分级
+    title: "Heading levels"
+    title.zh: "标题分级"
     type: heading
     level: 1
   -
     id: opal-h1-size
-    title: H1 字号
+    title: "H1 size"
+    title.zh: "H1 字号"
     type: variable-number-slider
     default: 2
     min: 0.9
@@ -242,7 +285,8 @@ settings:
     format: em
   -
     id: opal-h2-size
-    title: H2 字号
+    title: "H2 size"
+    title.zh: "H2 字号"
     type: variable-number-slider
     default: 1.65
     min: 0.9
@@ -251,7 +295,8 @@ settings:
     format: em
   -
     id: opal-h3-size
-    title: H3 字号
+    title: "H3 size"
+    title.zh: "H3 字号"
     type: variable-number-slider
     default: 1.4
     min: 0.9
@@ -260,7 +305,8 @@ settings:
     format: em
   -
     id: opal-h4-size
-    title: H4 字号
+    title: "H4 size"
+    title.zh: "H4 字号"
     type: variable-number-slider
     default: 1.2
     min: 0.9
@@ -269,7 +315,8 @@ settings:
     format: em
   -
     id: opal-h5-size
-    title: H5 字号
+    title: "H5 size"
+    title.zh: "H5 字号"
     type: variable-number-slider
     default: 1.1
     min: 0.9
@@ -278,7 +325,8 @@ settings:
     format: em
   -
     id: opal-h6-size
-    title: H6 字号
+    title: "H6 size"
+    title.zh: "H6 字号"
     type: variable-number-slider
     default: 1
     min: 0.8
@@ -287,7 +335,8 @@ settings:
     format: em
   -
     id: opal-h1-weight
-    title: H1 字重
+    title: "H1 weight"
+    title.zh: "H1 字重"
     type: variable-number-slider
     default: 700
     min: 100
@@ -295,7 +344,8 @@ settings:
     step: 50
   -
     id: opal-h2-weight
-    title: H2 字重
+    title: "H2 weight"
+    title.zh: "H2 字重"
     type: variable-number-slider
     default: 700
     min: 100
@@ -303,7 +353,8 @@ settings:
     step: 50
   -
     id: opal-h3-weight
-    title: H3 字重
+    title: "H3 weight"
+    title.zh: "H3 字重"
     type: variable-number-slider
     default: 650
     min: 100
@@ -311,7 +362,8 @@ settings:
     step: 50
   -
     id: opal-h4-weight
-    title: H4 字重
+    title: "H4 weight"
+    title.zh: "H4 字重"
     type: variable-number-slider
     default: 600
     min: 100
@@ -319,7 +371,8 @@ settings:
     step: 50
   -
     id: opal-h5-weight
-    title: H5 字重
+    title: "H5 weight"
+    title.zh: "H5 字重"
     type: variable-number-slider
     default: 600
     min: 100
@@ -327,7 +380,8 @@ settings:
     step: 50
   -
     id: opal-h6-weight
-    title: H6 字重
+    title: "H6 weight"
+    title.zh: "H6 字重"
     type: variable-number-slider
     default: 600
     min: 100
@@ -335,35 +389,40 @@ settings:
     step: 50
   -
     id: opal-hd-line
-    title: 标题下划线
-    description: 标题的下边线，可与下面的「标题前缀」叠加。渐变下划线（默认，各级自身色淡出）/ 单线底边 / 无。
+    title: "Heading underline"
+    title.zh: "标题下划线"
+    description: "The line beneath headings. It can be combined with the heading prefix below. Choose a per-level gradient, a single underline, or none."
+    description.zh: "标题的下边线，可与下面的「标题前缀」叠加。渐变下划线（默认，各级自身色淡出）/ 单线底边 / 无。"
     type: class-select
     allowEmpty: false
     default: opal-hdl-gradient
     options:
-      - label: 渐变下划线
+      - label: "Gradient underline / 渐变下划线"
         value: opal-hdl-gradient
-      - label: 单线底边
+      - label: "Single underline / 单线底边"
         value: opal-hdl-underline
-      - label: 无
+      - label: "None / 无"
         value: opal-hdl-none
   -
     id: opal-hd-prefix
-    title: 标题前缀
-    description: 标题前的标记，可与上面的「标题下划线」叠加。无（默认）/ 悬挂井号（左侧露出 #）/ 自动序号（1.2.3）。
+    title: "Heading prefix"
+    title.zh: "标题前缀"
+    description: "A marker before each heading. It can be combined with the heading underline above. Choose none, a hanging #, or automatic numbering such as 1.2.3."
+    description.zh: "标题前的标记，可与上面的「标题下划线」叠加。无（默认）/ 悬挂井号（左侧露出 #）/ 自动序号（1.2.3）。"
     type: class-select
     allowEmpty: false
     default: opal-hdp-none
     options:
-      - label: 无
+      - label: "None / 无"
         value: opal-hdp-none
-      - label: 悬挂井号
+      - label: "Hanging hash / 悬挂井号"
         value: opal-hdp-hash
-      - label: 自动序号
+      - label: "Automatic numbering / 自动序号"
         value: opal-hdp-counter
   -
     id: opal-h1-color
-    title: H1 颜色（逐级自定时用）
+    title: "H1 colour (custom scheme)"
+    title.zh: "H1 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -371,7 +430,8 @@ settings:
     default-dark: '#A6A8F2'
   -
     id: opal-h2-color
-    title: H2 颜色（逐级自定时用）
+    title: "H2 colour (custom scheme)"
+    title.zh: "H2 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -379,7 +439,8 @@ settings:
     default-dark: '#86BFF0'
   -
     id: opal-h3-color
-    title: H3 颜色（逐级自定时用）
+    title: "H3 colour (custom scheme)"
+    title.zh: "H3 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -387,7 +448,8 @@ settings:
     default-dark: '#82CFE6'
   -
     id: opal-h4-color
-    title: H4 颜色（逐级自定时用）
+    title: "H4 colour (custom scheme)"
+    title.zh: "H4 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -395,7 +457,8 @@ settings:
     default-dark: '#82D9C8'
   -
     id: opal-h5-color
-    title: H5 颜色（逐级自定时用）
+    title: "H5 colour (custom scheme)"
+    title.zh: "H5 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -403,7 +466,8 @@ settings:
     default-dark: '#C6D98A'
   -
     id: opal-h6-color
-    title: H6 颜色（逐级自定时用）
+    title: "H6 colour (custom scheme)"
+    title.zh: "H6 颜色（逐级自定时用）"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -411,13 +475,16 @@ settings:
     default-dark: '#F08AA0'
   -
     id: opal-h-layout
-    title: 布局尺寸
+    title: "Layout and sizing"
+    title.zh: "布局尺寸"
     type: heading
     level: 1
   -
     id: opal-line-width
-    title: 正文行宽
-    description: 一行最多多宽（可读宽度）。最常调的一项。
+    title: "Readable line width"
+    title.zh: "正文行宽"
+    description: "The maximum readable width of each text line. This is the layout setting most people adjust first."
+    description.zh: "一行最多多宽（可读宽度）。最常调的一项。"
     type: variable-number-slider
     default: 700
     min: 400
@@ -426,19 +493,24 @@ settings:
     format: px
   -
     id: opal-table-widen
-    title: 表格铺满行宽
-    description: 打开后表格占满可用宽度，不再被行宽夹窄。
+    title: "Full-width tables"
+    title.zh: "表格铺满行宽"
+    description: "Make tables use the full available width instead of limiting them to the readable line width."
+    description.zh: "打开后表格占满可用宽度，不再被行宽夹窄。"
     type: class-toggle
     default: false
   -
     id: opal-mermaid-scroll
-    title: 图表超宽改横向滚动
-    description: 默认超出行宽的 Mermaid 图会等比缩放适应行宽。打开此项改为保持原大小、超宽部分横向滚动查看。
+    title: "Scroll wide diagrams horizontally"
+    title.zh: "图表超宽改横向滚动"
+    description: "Wide Mermaid diagrams normally scale down to fit the line width. Enable this to keep their original size and scroll horizontally."
+    description.zh: "默认超出行宽的 Mermaid 图会等比缩放适应行宽。打开此项改为保持原大小、超宽部分横向滚动查看。"
     type: class-toggle
     default: false
   -
     id: opal-para-spacing
-    title: 段落间距
+    title: "Paragraph spacing"
+    title.zh: "段落间距"
     type: variable-number-slider
     default: 16
     min: 0
@@ -447,13 +519,16 @@ settings:
     format: px
   -
     id: opal-first-indent
-    title: 首行缩进排版
-    description: 打开后段落首行缩进两字、段间不留空（书本式）。关闭则段间留空、不缩进（网页式，默认）。
+    title: "First-line indent layout"
+    title.zh: "首行缩进排版"
+    description: "Use book-style paragraphs with a two-character first-line indent and no space between paragraphs. The default web-style layout uses paragraph spacing and no indent."
+    description.zh: "打开后段落首行缩进两字、段间不留空（书本式）。关闭则段间留空、不缩进（网页式，默认）。"
     type: class-toggle
     default: false
   -
     id: opal-list-indent
-    title: 列表缩进
+    title: "List indentation"
+    title.zh: "列表缩进"
     type: variable-number-slider
     default: 2
     min: 0.8
@@ -462,7 +537,8 @@ settings:
     format: em
   -
     id: opal-file-margin
-    title: 编辑区上下边距
+    title: "Editor vertical margins"
+    title.zh: "编辑区上下边距"
     type: variable-number-slider
     default: 40
     min: 0
@@ -471,7 +547,8 @@ settings:
     format: px
   -
     id: opal-img-radius
-    title: 图片圆角
+    title: "Image corner radius"
+    title.zh: "图片圆角"
     type: variable-number-slider
     default: 10
     min: 0
@@ -480,7 +557,8 @@ settings:
     format: px
   -
     id: opal-img-width
-    title: 图片最大宽度
+    title: "Maximum image width"
+    title.zh: "图片最大宽度"
     type: variable-number-slider
     default: 100
     min: 30
@@ -489,29 +567,34 @@ settings:
     format: '%'
   -
     id: opal-img-shadow
-    title: 图片投影
-    description: 打开后图片带柔和投影，像浮起的照片。
+    title: "Image shadow"
+    title.zh: "图片投影"
+    description: "Add a soft shadow that makes images appear slightly raised."
+    description.zh: "打开后图片带柔和投影，像浮起的照片。"
     type: class-toggle
     default: false
   -
     id: opal-bg-texture
-    title: 背景纹理
-    description: 编辑区背景纹理。无（默认）/ 点阵 / 方格纸 / 横线纸。
+    title: "Editor background texture"
+    title.zh: "背景纹理"
+    description: "Choose the editor background texture: none, dot grid, square grid, or ruled lines."
+    description.zh: "编辑区背景纹理。无（默认）/ 点阵 / 方格纸 / 横线纸。"
     type: class-select
     allowEmpty: false
     default: opal-tex-none
     options:
-      - label: 无
+      - label: "None / 无"
         value: opal-tex-none
-      - label: 点阵
+      - label: "Dot grid / 点阵"
         value: opal-tex-dot
-      - label: 方格纸
+      - label: "Square grid / 方格纸"
         value: opal-tex-grid
-      - label: 横线纸
+      - label: "Ruled lines / 横线纸"
         value: opal-tex-line
   -
     id: opal-radius
-    title: 圆角大小
+    title: "Corner radius"
+    title.zh: "圆角大小"
     type: variable-number-slider
     default: 10
     min: 0
@@ -520,29 +603,34 @@ settings:
     format: px
   -
     id: opal-corner
-    title: 圆角形状
-    description: 超椭圆=iOS 式更柔的角（默认；老引擎自动退标准圆角）。标准圆角 / 凹角 scoop / 斜角 bevel。
+    title: "Corner shape"
+    title.zh: "圆角形状"
+    description: "Squircle gives a softer iOS-style corner and falls back to standard rounding on older engines. Rounded, scoop, and bevel shapes are also available."
+    description.zh: "超椭圆=iOS 式更柔的角（默认；老引擎自动退标准圆角）。标准圆角 / 凹角 scoop / 斜角 bevel。"
     type: class-select
     allowEmpty: false
     default: opal-corner-squircle
     options:
-      - label: 超椭圆 squircle
+      - label: "Squircle / 超椭圆 squircle"
         value: opal-corner-squircle
-      - label: 标准圆角
+      - label: "Rounded / 标准圆角"
         value: opal-corner-round
-      - label: 凹角 scoop
+      - label: "Scoop / 凹角 scoop"
         value: opal-corner-scoop
-      - label: 斜角 bevel
+      - label: "Bevel / 斜角 bevel"
         value: opal-corner-bevel
   -
     id: opal-h-border
-    title: 界面线条与边框
+    title: "Borders and dividers"
+    title.zh: "界面线条与边框"
     type: heading
     level: 1
   -
     id: opal-border-width
-    title: 全局边框粗细
-    description: 卡片、输入框、表格、菜单等所有描边的统一粗细。
+    title: "Global border width"
+    title.zh: "全局边框粗细"
+    description: "One shared stroke width for cards, inputs, tables, menus, and other outlined elements."
+    description.zh: "卡片、输入框、表格、菜单等所有描边的统一粗细。"
     type: variable-number-slider
     default: 1
     min: 0
@@ -551,7 +639,8 @@ settings:
     format: px
   -
     id: opal-border-color
-    title: 全局边框颜色
+    title: "Global border colour"
+    title.zh: "全局边框颜色"
     type: variable-themed-color
     format: hex
     opacity: false
@@ -559,57 +648,68 @@ settings:
     default-dark: '#3A3F4E'
   -
     id: opal-divider-style
-    title: 分隔线风格
-    description: 正文分隔线（---）的样式。渐隐（默认）/ 实线 / 虚线 / 圆点 / 双线。
+    title: "Divider style"
+    title.zh: "分隔线风格"
+    description: "The style used for Markdown horizontal rules: fade, solid, dashed, dotted, or double."
+    description.zh: "正文分隔线（---）的样式。渐隐（默认）/ 实线 / 虚线 / 圆点 / 双线。"
     type: class-select
     allowEmpty: false
     default: opal-div-fade
     options:
-      - label: 渐隐
+      - label: "Fade / 渐隐"
         value: opal-div-fade
-      - label: 实线
+      - label: "Solid / 实线"
         value: opal-div-solid
-      - label: 虚线
+      - label: "Dashed / 虚线"
         value: opal-div-dash
-      - label: 圆点
+      - label: "Dotted / 圆点"
         value: opal-div-dot
-      - label: 双线
+      - label: "Double / 双线"
         value: opal-div-double
   -
     id: opal-pane-borders
-    title: 显示面板分隔边框
-    description: 打开后相邻面板之间画出分隔线，边界更清楚。默认关（靠留白区分）。
+    title: "Panel divider borders"
+    title.zh: "显示面板分隔边框"
+    description: "Draw divider lines between adjacent panes. The default uses spacing alone to separate them."
+    description.zh: "打开后相邻面板之间画出分隔线，边界更清楚。默认关（靠留白区分）。"
     type: class-toggle
     default: false
   -
     id: opal-nav-indent-line
-    title: 文件树缩进参考线
-    description: 侧栏文件树每层缩进画一条竖参考线（默认开）。关闭则只靠缩进。
+    title: "File tree indentation guides"
+    title.zh: "文件树缩进参考线"
+    description: "Draw a vertical guide for each indentation level in the file tree. Enabled by default."
+    description.zh: "侧栏文件树每层缩进画一条竖参考线（默认开）。关闭则只靠缩进。"
     type: class-toggle
     default: true
   -
     id: opal-indent-guide
-    title: 正文列表缩进线
-    description: 正文里多级列表每层画竖参考线，看清层级。默认关。
+    title: "List indentation guides"
+    title.zh: "正文列表缩进线"
+    description: "Draw vertical guides through nested lists in documents. Disabled by default."
+    description.zh: "正文里多级列表每层画竖参考线，看清层级。默认关。"
     type: class-toggle
     default: false
   -
     id: opal-focus-ring
-    title: 焦点环风格
-    description: 输入框/按钮获得焦点时的提示。描边（默认）/ 发光 / 无。
+    title: "Focus ring style"
+    title.zh: "焦点环风格"
+    description: "The indicator shown when an input or button receives focus: outline, glow, or none."
+    description.zh: "输入框/按钮获得焦点时的提示。描边（默认）/ 发光 / 无。"
     type: class-select
     allowEmpty: false
     default: opal-ring-outline
     options:
-      - label: 描边
+      - label: "Outline / 描边"
         value: opal-ring-outline
-      - label: 发光
+      - label: "Glow / 发光"
         value: opal-ring-glow
-      - label: 无
+      - label: "None / 无"
         value: opal-ring-none
   -
     id: opal-scrollbar-width
-    title: 滚动条粗细
+    title: "Scrollbar width"
+    title.zh: "滚动条粗细"
     type: variable-number-slider
     default: 12
     min: 0
@@ -618,240 +718,283 @@ settings:
     format: px
   -
     id: opal-table-border
-    title: 表格边框
-    description: 仅横线（默认）/ 全框（每格描边）/ 无框。
+    title: "Table borders"
+    title.zh: "表格边框"
+    description: "Choose horizontal rules only, a full cell grid, or a borderless table."
+    description.zh: "仅横线（默认）/ 全框（每格描边）/ 无框。"
     type: class-select
     allowEmpty: false
     default: opal-tb-row
     options:
-      - label: 仅横线
+      - label: "Horizontal rules / 仅横线"
         value: opal-tb-row
-      - label: 全框
+      - label: "Full grid / 全框"
         value: opal-tb-full
-      - label: 无框
+      - label: "Borderless / 无框"
         value: opal-tb-none
   -
     id: opal-h-toggle
-    title: 元素开关
+    title: "Element toggles"
+    title.zh: "元素开关"
     type: heading
     level: 1
   -
     id: opal-link-plain
-    title: 去掉链接下划线
-    description: 打开后所有链接不带下划线，只用颜色区分。
+    title: "Remove link underlines"
+    title.zh: "去掉链接下划线"
+    description: "Remove link underlines and distinguish links by colour alone."
+    description.zh: "打开后所有链接不带下划线，只用颜色区分。"
     type: class-toggle
     default: false
   -
     id: opal-code-wrap
-    title: 代码块自动换行
-    description: 打开后长代码行自动折行，不再横向滚动。
+    title: "Wrap code blocks"
+    title.zh: "代码块自动换行"
+    description: "Wrap long code lines instead of scrolling horizontally."
+    description.zh: "打开后长代码行自动折行，不再横向滚动。"
     type: class-toggle
     default: false
   -
     id: opal-code-ligatures
-    title: 代码连字
-    description: 打开后代码里连字合成合字（需字体支持）。
+    title: "Code ligatures"
+    title.zh: "代码连字"
+    description: "Enable programming ligatures when the selected code font supports them."
+    description.zh: "打开后代码里连字合成合字（需字体支持）。"
     type: class-toggle
     default: false
   -
     id: opal-table-plain
-    title: 关闭表格斑马纹
-    description: 默认偶数行有淡色底。打开此项取消斑马纹。
+    title: "Disable table stripes"
+    title.zh: "关闭表格斑马纹"
+    description: "Remove the subtle fill used on alternating table rows."
+    description.zh: "默认偶数行有淡色底。打开此项取消斑马纹。"
     type: class-toggle
     default: false
   -
     id: opal-active-line
-    title: 高亮当前行
-    description: 打开后光标所在行有淡强调色底，便于定位。
+    title: "Highlight active line"
+    title.zh: "高亮当前行"
+    description: "Add a faint accent background to the line containing the cursor."
+    description.zh: "打开后光标所在行有淡强调色底，便于定位。"
     type: class-toggle
     default: false
   -
     id: opal-focus-mode
-    title: 聚焦暗化
-    description: 打开后非当前段落变淡，只有正在写的那段清晰。
+    title: "Focus mode"
+    title.zh: "聚焦暗化"
+    description: "Dim paragraphs outside the one currently being edited."
+    description.zh: "打开后非当前段落变淡，只有正在写的那段清晰。"
     type: class-toggle
     default: false
   -
     id: opal-tasks-native
-    title: 复选框回退原生
-    description: 打开后不用自定义状态样式，退回系统原生复选框。
+    title: "Use native checkboxes"
+    title.zh: "复选框回退原生"
+    description: "Use Obsidian's native checkbox appearance instead of Opal's custom task states."
+    description.zh: "打开后不用自定义状态样式，退回系统原生复选框。"
     type: class-toggle
     default: false
   -
     id: opal-list-scheme
-    title: 列表符号
-    description: 分层形状=按深度 ●○▪– 变形+单色（默认）。彩虹循环=形状不变、按深度换色。单色圆点=各级都用同色实心圆点。
+    title: "List markers"
+    title.zh: "列表符号"
+    description: "Hierarchical shapes change marker shape by depth and use one colour. Rainbow cycle keeps the shape and changes colour by depth. Single-colour dots use the same filled dot at every level."
+    description.zh: "分层形状=按深度 ●○▪– 变形+单色（默认）。彩虹循环=形状不变、按深度换色。单色圆点=各级都用同色实心圆点。"
     type: class-select
     allowEmpty: false
     default: opal-list-shape
     options:
-      - label: 分层形状
+      - label: "Hierarchical shapes / 分层形状"
         value: opal-list-shape
-      - label: 彩虹循环
+      - label: "Rainbow cycle / 彩虹循环"
         value: opal-list-rainbow
-      - label: 单色圆点
+      - label: "Single-colour dots / 单色圆点"
         value: opal-list-dot
   -
     id: opal-no-bg-orb
-    title: 关闭氛围背景光晕
-    description: 编辑区背后默认有极淡角落光晕。打开此项关掉它。
+    title: "Disable ambient background glow"
+    title.zh: "关闭氛围背景光晕"
+    description: "Remove the faint ambient glow behind the editor."
+    description.zh: "编辑区背后默认有极淡角落光晕。打开此项关掉它。"
     type: class-toggle
     default: false
   -
     id: opal-h-skin
-    title: 皮肤与动效
+    title: "Skins and motion"
+    title.zh: "皮肤与动效"
     type: heading
     level: 1
   -
     id: opal-surface
-    title: 表面质感
-    description: 实底=性能/可读最佳（默认）。毛玻璃=通透。液态玻璃=最有质感最吃性能。系统开「减少透明度」自动退实底。
+    title: "Surface material"
+    title.zh: "表面质感"
+    description: "Opaque solid gives the best performance and readability. Frosted glass adds translucency. Liquid glass is richer and more demanding. Reduced Transparency switches either glass style back to solid."
+    description.zh: "实底=性能/可读最佳（默认）。毛玻璃=通透。液态玻璃=最有质感最吃性能。系统开「减少透明度」自动退实底。"
     type: class-select
     allowEmpty: false
     default: opal-surface-solid
     options:
-      - label: 实底不透明
+      - label: "Opaque solid / 实底不透明"
         value: opal-surface-solid
-      - label: 毛玻璃
+      - label: "Frosted glass / 毛玻璃"
         value: opal-surface-glass
-      - label: 液态玻璃
+      - label: "Liquid glass / 液态玻璃"
         value: opal-surface-liquid
   -
     id: opal-ui-language
-    title: 界面设计语言
-    description: 整体控件观感。中性（默认）/ Cupertino（圆润+轻投影）/ Fluent（微亮描边）/ Material（实底+明确阴影）。
+    title: "Interface design language"
+    title.zh: "界面设计语言"
+    description: "Choose the overall control treatment: Neutral, Cupertino with softer corners and light shadows, Fluent with subtle bright borders, or Material with solid surfaces and defined shadows."
+    description.zh: "整体控件观感。中性（默认）/ Cupertino（圆润+轻投影）/ Fluent（微亮描边）/ Material（实底+明确阴影）。"
     type: class-select
     allowEmpty: false
     default: opal-ui-neutral
     options:
-      - label: 中性
+      - label: "Neutral / 中性"
         value: opal-ui-neutral
-      - label: Cupertino
+      - label: "Cupertino / 苹果风格"
         value: opal-ui-cupertino
-      - label: Fluent
+      - label: "Fluent / 微亮描边风格"
         value: opal-ui-fluent
-      - label: Material
+      - label: "Material / 实底阴影风格"
         value: opal-ui-material
   -
     id: opal-callout-skin
-    title: Callout 皮肤
-    description: 融合款=软底+左条+轻抬升（默认）。硬阴影 / 描边 / HUD发光 / 反色标题条 / 折角纸片。
+    title: "Callout skin"
+    title.zh: "Callout 皮肤"
+    description: "Fused uses a soft fill, side bar, and slight lift. Other choices add a brutalist shadow, minimal outline, HUD glow, inverted title bar, or folded-paper corner."
+    description.zh: "融合款=软底+左条+轻抬升（默认）。硬阴影 / 描边 / HUD发光 / 反色标题条 / 折角纸片。"
     type: class-select
     allowEmpty: false
     default: opal-co-fused
     options:
-      - label: 融合款（软底+左条）
+      - label: "Fused (soft fill + side bar) / 融合款（软底+左条）"
         value: opal-co-fused
-      - label: 硬阴影（新粗野）
+      - label: "Brutalist shadow / 硬阴影（新粗野）"
         value: opal-co-brutal
-      - label: 描边极简
+      - label: "Minimal outline / 描边极简"
         value: opal-co-outline
-      - label: HUD 发光
+      - label: "HUD glow / HUD 发光"
         value: opal-co-glow
-      - label: 反色标题条
+      - label: "Inverted title bar / 反色标题条"
         value: opal-co-bar
-      - label: 折角纸片
+      - label: "Folded paper / 折角纸片"
         value: opal-co-paper
   -
     id: opal-folder-scheme
-    title: 文件夹着色
-    description: 彩虹脊柱=顶层循环色+子树继承（默认）。编号分区=按 00/10/20 前缀分色。单色 / 关闭。
+    title: "Folder colours"
+    title.zh: "文件夹着色"
+    description: "Rainbow spine cycles top-level colours and passes each colour down its subtree. Numbered sections colour 00, 10, and 20 prefixes. Single colour and off are also available."
+    description.zh: "彩虹脊柱=顶层循环色+子树继承（默认）。编号分区=按 00/10/20 前缀分色。单色 / 关闭。"
     type: class-select
     allowEmpty: false
     default: opal-folder-rainbow
     options:
-      - label: 彩虹脊柱
+      - label: "Rainbow spine / 彩虹脊柱"
         value: opal-folder-rainbow
-      - label: 编号分区
+      - label: "Numbered sections / 编号分区"
         value: opal-folder-numbered
-      - label: 单色
+      - label: "Single colour / 单色"
         value: opal-folder-mono
-      - label: 关闭
+      - label: "Off / 关闭"
         value: opal-folder-plain
   -
     id: opal-motion
-    title: 动效总取向
-    description: 一个旋钮统管全站微动效。关=全静态。微=更轻更慢。标准=克制快顺（默认）。活泼=幅度大带回弹。系统开「减少动态」自动全关。
+    title: "Motion level"
+    title.zh: "动效总取向"
+    description: "One control for interface motion. Off removes motion. Subtle is gentler and slower. Standard is quick and restrained. Lively adds larger movement and spring. Reduced Motion disables all of them."
+    description.zh: "一个旋钮统管全站微动效。关=全静态。微=更轻更慢。标准=克制快顺（默认）。活泼=幅度大带回弹。系统开「减少动态」自动全关。"
     type: class-select
     allowEmpty: false
     default: opal-motion-standard
     options:
-      - label: 关
+      - label: "Off / 关"
         value: opal-motion-off
-      - label: 微
+      - label: "Subtle / 微"
         value: opal-motion-mini
-      - label: 标准
+      - label: "Standard / 标准"
         value: opal-motion-standard
-      - label: 活泼
+      - label: "Lively / 活泼"
         value: opal-motion-lively
   -
     id: opal-entrance
-    title: 入场动效
-    description: 开笔记时整篇淡入一次。去模糊合焦（默认）/ 平滑平移 / 弹性过冲。
+    title: "Page entrance"
+    title.zh: "入场动效"
+    description: "Fade each note in once when it opens. Choose focus from blur, a smooth slide, or an elastic overshoot."
+    description.zh: "开笔记时整篇淡入一次。去模糊合焦（默认）/ 平滑平移 / 弹性过冲。"
     type: class-select
     allowEmpty: false
     default: opal-ent-blur
     options:
-      - label: 去模糊合焦
+      - label: "Focus from blur / 去模糊合焦"
         value: opal-ent-blur
-      - label: 平滑无过冲
+      - label: "Smooth slide / 平滑无过冲"
         value: opal-ent-smooth
-      - label: 弹性过冲
+      - label: "Elastic overshoot / 弹性过冲"
         value: opal-ent-bounce
   -
     id: opal-retro
-    title: 复古皮肤
-    description: 整套复古外壳。无（默认）/ 合成波 / 绿磷终端 / 琥珀CRT / 数字雨。
+    title: "Retro skin"
+    title.zh: "复古皮肤"
+    description: "Apply a complete retro shell: none, Synthwave, green phosphor terminal, amber CRT, or digital rain."
+    description.zh: "整套复古外壳。无（默认）/ 合成波 / 绿磷终端 / 琥珀CRT / 数字雨。"
     type: class-select
     allowEmpty: false
     default: opal-retro-none
     options:
-      - label: 无
+      - label: "None / 无"
         value: opal-retro-none
-      - label: 合成波 Synthwave
+      - label: "Synthwave / 合成波"
         value: opal-retro-synth
-      - label: 绿磷终端
+      - label: "Green phosphor terminal / 绿磷终端"
         value: opal-retro-green
-      - label: 琥珀 CRT
+      - label: "Amber CRT / 琥珀 CRT"
         value: opal-retro-amber
-      - label: 数字雨
+      - label: "Digital rain / 数字雨"
         value: opal-retro-matrix
   -
     id: opal-h-print
-    title: 打印导出
+    title: "Print and PDF export"
+    title.zh: "打印导出"
     type: heading
     level: 1
   -
     id: opal-print-dark
-    title: 导出保留暗色
-    description: 默认导出转纸面浅色（省墨可读）。打开后保留暗底（需在导出设置里开 printBackground）。
+    title: "Keep dark colours in exports"
+    title.zh: "导出保留暗色"
+    description: "Exports use a white paper background by default. Enable this to preserve the dark theme, and enable background printing in the export tool."
+    description.zh: "默认导出转纸面浅色（省墨可读）。打开后保留暗底（需在导出设置里开 printBackground）。"
     type: class-toggle
     default: false
   -
     id: opal-print-font
-    title: 打印正文字体
-    description: 导出时正文换成。衬线（默认，纸面易读）/ 不置换 / 打字机。
+    title: "Print body font"
+    title.zh: "打印正文字体"
+    description: "Choose the body font used for export: serif for paper readability, keep the current font, or typewriter."
+    description.zh: "导出时正文换成。衬线（默认，纸面易读）/ 不置换 / 打字机。"
     type: class-select
     allowEmpty: false
     default: opal-pf-serif
     options:
-      - label: 衬线
+      - label: "Serif / 衬线"
         value: opal-pf-serif
-      - label: 不置换
+      - label: "Keep current font / 不置换"
         value: opal-pf-keep
-      - label: 打字机
+      - label: "Typewriter / 打字机"
         value: opal-pf-mono
   -
     id: opal-print-align
-    title: 打印段落对齐
-    description: 两端对齐+首行缩进（默认，书本式）/ 齐左。
+    title: "Print paragraph alignment"
+    title.zh: "打印段落对齐"
+    description: "Choose book-style justified paragraphs with first-line indentation, or left-aligned paragraphs."
+    description.zh: "两端对齐+首行缩进（默认，书本式）/ 齐左。"
     type: class-select
     allowEmpty: false
     default: opal-pa-justify
     options:
-      - label: 两端对齐
+      - label: "Justified / 两端对齐"
         value: opal-pa-justify
-      - label: 齐左
+      - label: "Left aligned / 齐左"
         value: opal-pa-left
 */
 
@@ -1486,6 +1629,30 @@ body{--inline-title-font: var(--o-font-heading)}
 .workspace-leaf-content[data-type="excel-view"]{--sheet-toolbar-background-color:var(--o-mantle);--sheet-header-background-color:var(--o-surface0);--sheet-toolbar-divider-color:var(--o-surface1);--sheet-iframe-background-color:var(--o-base)}
 /* d2：暗色下覆盖重编译按钮的硬白底 */
 .theme-dark .Preview__Recompile{background-color:var(--o-surface1)!important;color:var(--o-text)}
+/* Better Export PDF：外层预览跟随 Opal；webview 内的纸张由第 23 节打印规则固定 */
+#better-export-pdf{
+  --background-primary:var(--o-base);
+  --background-secondary:var(--o-mantle);
+  --background-modifier-border:var(--o-surface1);
+}
+#better-export-pdf .pdf-preview{background:var(--o-crust)}
+#better-export-pdf .setting-wrapper{color:var(--o-text)}
+/* Advanced PDF Export：只适配 modal 外壳。预览页在 Shadow DOM 内，最终纸张由插件 pageBackground 控制 */
+.mpdf-modal{
+  --background-primary:var(--o-base);
+  --background-secondary:var(--o-mantle);
+  --background-secondary-alt:var(--o-crust);
+  --background-modifier-border:var(--o-surface1);
+  --text-normal:var(--o-text);
+  --text-muted:var(--o-subtext0);
+  --text-faint:var(--o-overlay1);
+  --interactive-accent:var(--o-accent);
+  --interactive-accent-hover:var(--o-accent2);
+  --text-on-accent:var(--o-on-accent);
+  background:var(--o-base);border:var(--o-bw) solid var(--o-surface1);border-radius:var(--o-r)
+}
+.mpdf-modal :is(.mpdf-select,.mpdf-custom-size-input,.mpdf-btn){border-radius:calc(var(--o-r) * .55)}
+.mpdf-modal :is(.mpdf-select,.mpdf-custom-size-input,.mpdf-btn):focus-visible{outline:2px solid color-mix(in oklab,var(--o-accent) 65%,transparent);outline-offset:2px}
 
 /* =====================================================================
    22. 编辑态（实时预览 CM6）补齐：把只在阅读态生效的装饰补到编辑器
@@ -1545,7 +1712,23 @@ body:not(.opal-tasks-native) .HyperMD-task-line[data-task="*"] .task-list-item-c
    23. 打印 / 导出
    ===================================================================== */
 @media print {
-  body:not(.opal-print-dark){--background-primary:#fff!important;--background-primary-alt:#fff!important;--background-secondary:#fff!important;--text-normal:#222!important;--text-muted:#555!important}
+  html{background:#fff!important;background-color:#fff!important;background-image:none!important}
+  html:has(body.opal-print-dark){background:var(--o-base)!important;background-color:var(--o-base)!important}
+  body:not(.opal-print-dark){
+    --o-crust-n:#fff;--o-mantle-n:#fff;--o-base-n:#fff;
+    --o-s0-n:#fff;--o-s1-n:#d0d0d0;--o-s2-n:#b8b8b8;
+    --o-crust:#fff;--o-mantle:#fff;--o-base:#fff;
+    --o-surface0:#fff;--o-surface1:#d0d0d0;--o-surface2:#b8b8b8;
+    --background-primary:#fff!important;--background-primary-alt:#fff!important;
+    --background-secondary:#fff!important;--background-secondary-alt:#fff!important;
+    --background-modifier-border:#d0d0d0!important;--canvas-background:#fff!important;
+    --text-normal:#222!important;--text-muted:#555!important;
+    --o-text:#222;--o-subtext0:#555;--o-subtext1:#444;
+  }
+  body:not(.opal-print-dark),
+  body:not(.opal-print-dark) :is(.print,.markdown-preview-view,.markdown-preview-sizer,.markdown-rendered){
+    background:#fff!important;background-color:#fff!important;background-image:none!important
+  }
   .opal-pf-serif .markdown-rendered{font-family:var(--o-fallback-serif)}
   .opal-pf-mono .markdown-rendered{font-family:var(--o-fallback-mono)}
   .opal-pa-justify .markdown-rendered p{text-align:justify;text-indent:2em;hyphens:auto}
