@@ -11,12 +11,12 @@ A comprehensive, accessibility-checked theme for Obsidian, with a dual light/dar
 ## Highlights / 特性
 
 - **Dual flavour** — hand-tuned light and dark palettes, WCAG-checked (body text ≥ 4.5:1, decorative elements ≥ 3:1 in both modes).
-- **~82 Style Settings controls** in 8 groups: colour, fonts, per-level headings, layout, borders & lines, element toggles, skins & motion, print. Every control has a plain-language description.
+- **~82 Style Settings controls** in 8 groups: colour, fonts, per-level headings, layout, borders & lines, element toggles, skins & motion, print. Titles and descriptions follow Obsidian's interface language automatically: Simplified Chinese for `zh`, English as the fallback. Select options use compact bilingual labels because Style Settings localises titles and descriptions only.
 - **Reading + editor parity** — headings, dividers, tags, highlights, callouts, tables, task states, blockquotes and more are styled in Live Preview too, not just reading view.
 - **Native feature coverage** — Bases, Canvas (6-colour mapping + accent bars + dashed group boxes), Properties, command palette, graph view, tab bar, ribbon, inline title, footnotes, status bar, tooltips.
-- **Plugin adaptations** — editing-toolbar, Calendar, Admonition, Timeline, and more, wired through each plugin's own CSS-variable interface (upgrade-safe).
+- **Plugin adaptations** — editing-toolbar, Calendar, Admonition, Timeline, Better Export PDF, Advanced PDF Export, and more, wired through each plugin's stable classes or CSS-variable interface.
 - **Callout Chinese aliases** — `[!笔记] [!警告] [!提示] [!成功] [!危险]` … map onto the semantic colours.
-- **Robust by design** — every advanced feature (`color-mix`, `oklch`, `corner-shape`, `:has`) has an `@supports` fallback; honours `prefers-reduced-motion` and `prefers-reduced-transparency`; full `@media print` reset for clean PDF export.
+- **Robust by design** — every advanced feature (`color-mix`, `oklch`, `corner-shape`, `:has`) has an `@supports` fallback; honours `prefers-reduced-motion` and `prefers-reduced-transparency`; the print reset fixes the default paper surface to pure white while retaining an explicit dark-export option.
 
 ## Requirements / 依赖
 
@@ -43,7 +43,17 @@ Manual: copy the `Opal Theme` folder into `<vault>/.obsidian/themes/`, then **Se
 
 ## Style Settings groups / 配置分组
 
+Colours · Fonts · Heading levels (H1-H6 size, weight, and colour) · Layout and sizing · Borders and dividers · Element toggles · Skins and motion · Print and PDF export.
+
 配色 · 字体 · 标题分级（H1-H6 逐级字号/字重/颜色）· 布局尺寸（行宽/间距/缩进/图片）· 界面线条与边框 · 元素开关 · 皮肤与动效（Callout 皮肤、界面设计语言、复古皮肤、动效、入场）· 打印导出。
+
+## PDF export compatibility / PDF 导出兼容
+
+- **Obsidian PDF export and Better Export PDF:** Opal fixes the default page root, rendered document, and preview surface to `#fff`. The **Keep dark colours in exports / 导出保留暗色** setting preserves the dark export path when background printing is enabled.
+- **Advanced PDF Export:** the plugin owns each preview and PDF page through its `pageBackground` setting and isolated Shadow DOM. Opal styles the surrounding modal so it follows the theme. Choose `#ffffff` in the plugin's **Page background color** control for white paper.
+
+- **Obsidian 原生导出和 Better Export PDF：** Opal 会把默认页面根节点、正文和预览纸面固定为 `#fff`。开启「导出保留暗色」并在导出工具中启用背景打印，即可走暗色导出。
+- **Advanced PDF Export：** 插件通过独立 Shadow DOM 和 `pageBackground` 设置控制预览及最终 PDF 纸面；Opal 负责适配外层窗口。需要白纸时，在插件的「Page background color」中选择 `#ffffff`。
 
 ## Credits / 致谢
 
