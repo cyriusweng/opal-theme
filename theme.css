@@ -1,5 +1,5 @@
 /* =====================================================================
-   Opal Theme  ·  v2.1.2（约 82 个可调控件 + 界面线条/边框全覆盖）
+   Opal Theme  ·  v2.1.3（约 82 个可调控件 + 界面线条/边框全覆盖）
    Opal 配色（浅深双 flavour）+ 559 主题精华。
    轴一：审美路线（class-select）。轴二：自定义输入与数值微调（本版补齐）。
    健壮性：每个变量项都带默认兜底；@supports / reduced-motion / reduced-transparency / 打印复位。
@@ -1013,9 +1013,9 @@ settings:
   --o-orchid:#D29AEE; --o-pink:#EE9AD6;
   --o-on-accent:#0B1120;
   --o-hl-default:#EBD08A; --o-hl-line-default:#EBD08A; --o-accent-default:#8098FF;
-  --o-cc-blue:143 174 245; --o-cc-cyan:130 207 230; --o-cc-green:146 219 168;
-  --o-cc-amber:235 208 138; --o-cc-rose:240 138 160; --o-cc-teal:130 217 200;
-  --o-cc-orchid:210 154 238; --o-cc-indigo:166 168 242;
+  --o-cc-blue:rgb(143 174 245); --o-cc-cyan:rgb(130 207 230); --o-cc-green:rgb(146 219 168);
+  --o-cc-amber:rgb(235 208 138); --o-cc-rose:rgb(240 138 160); --o-cc-teal:rgb(130 217 200);
+  --o-cc-orchid:rgb(210 154 238); --o-cc-indigo:rgb(166 168 242);
 }
 .theme-light {
   --o-crust-n:#DADEE8; --o-mantle-n:#E4E7EF; --o-base-n:#EDEFF4;
@@ -1029,9 +1029,9 @@ settings:
   --o-orchid:#9040B3; --o-pink:#A73A8A;
   --o-on-accent:#FFFFFF;
   --o-hl-default:#F6E1A2; --o-hl-line-default:#946F0E; --o-accent-default:#4C50C8;
-  --o-cc-blue:58 95 196; --o-cc-cyan:14 110 130; --o-cc-green:40 114 68;
-  --o-cc-amber:123 98 20; --o-cc-rose:177 58 86; --o-cc-teal:18 114 102;
-  --o-cc-orchid:146 65 180; --o-cc-indigo:76 80 200;
+  --o-cc-blue:rgb(58 95 196); --o-cc-cyan:rgb(14 110 130); --o-cc-green:rgb(40 114 68);
+  --o-cc-amber:rgb(123 98 20); --o-cc-rose:rgb(177 58 86); --o-cc-teal:rgb(18 114 102);
+  --o-cc-orchid:rgb(146 65 180); --o-cc-indigo:rgb(76 80 200);
 }
 body {
   /* 中性层：默认直接取原色（无 color-mix 也安全） */
@@ -1306,12 +1306,12 @@ body {
    5. Callout：融合默认 + 26 类型语义色 + 皮肤
    ===================================================================== */
 .callout{
-  background:var(--o-base);border:0;border-left:3px solid rgb(var(--callout-color));
+  background:var(--o-base);border:0;border-left:3px solid var(--callout-color);
   border-radius:var(--radius-s) var(--radius-m) var(--radius-m) var(--radius-s);
   box-shadow:0 1px 2px rgba(0,0,0,.18),0 6px 16px -8px rgba(0,0,0,.28);
 }
-@supports (background: color-mix(in oklab, red, blue)){.callout{background:color-mix(in oklab,rgb(var(--callout-color)) 6%,var(--o-base))}}
-.callout-title,.callout-icon{color:rgb(var(--callout-color))}
+@supports (background: color-mix(in oklab, red, blue)){.callout{background:color-mix(in oklab,var(--callout-color) 6%,var(--o-base))}}
+.callout-title,.callout-icon{color:var(--callout-color)}
 .callout[data-callout="info"],.callout[data-callout="todo"]{--callout-color:var(--o-cc-blue)}
 .callout[data-callout="tip"],.callout[data-callout="hint"],.callout[data-callout="important"]{--callout-color:var(--o-cc-teal)}
 .callout[data-callout="success"],.callout[data-callout="check"],.callout[data-callout="done"]{--callout-color:var(--o-cc-green)}
@@ -1329,12 +1329,12 @@ body {
 .callout[data-callout="危险"],.callout[data-callout="错误"],.callout[data-callout="失败"],.callout[data-callout="缺陷"],.callout[data-callout="故障"]{--callout-color:var(--o-cc-rose)}
 .callout[data-callout="示例"],.callout[data-callout="例子"]{--callout-color:var(--o-cc-orchid)}
 .callout[data-callout="引用"],.callout[data-callout="引文"]{--callout-color:var(--o-cc-cyan)}
-.opal-co-brutal .callout{border:2px solid rgb(var(--callout-color));border-radius:4px;box-shadow:4px 4px 0 rgb(var(--callout-color));background:var(--o-base)}
-.opal-co-outline .callout{background:transparent;border:var(--o-bw) solid color-mix(in oklab,rgb(var(--callout-color)) 55%,var(--o-surface1));box-shadow:none}
-.opal-co-glow .callout{box-shadow:0 0 12px -2px rgb(var(--callout-color)),inset 0 0 10px -6px rgb(var(--callout-color))}
+.opal-co-brutal .callout{border:2px solid var(--callout-color);border-radius:4px;box-shadow:4px 4px 0 var(--callout-color);background:var(--o-base)}
+.opal-co-outline .callout{background:transparent;border:var(--o-bw) solid color-mix(in oklab,var(--callout-color) 55%,var(--o-surface1));box-shadow:none}
+.opal-co-glow .callout{box-shadow:0 0 12px -2px var(--callout-color),inset 0 0 10px -6px var(--callout-color)}
 .opal-co-bar .callout{padding-left:0;border-left:0;overflow:hidden}
-.opal-co-bar .callout-title{background:rgb(var(--callout-color));color:var(--o-base);padding:5px 12px}
-.opal-co-paper .callout{border:0;box-shadow:0 2px 6px -2px rgba(0,0,0,.3);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);background:color-mix(in oklab,rgb(var(--callout-color)) 7%,var(--o-mantle))}
+.opal-co-bar .callout-title{background:var(--callout-color);color:var(--o-base);padding:5px 12px}
+.opal-co-paper .callout{border:0;box-shadow:0 2px 6px -2px rgba(0,0,0,.3);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);background:color-mix(in oklab,var(--callout-color) 7%,var(--o-mantle))}
 
 /* =====================================================================
    6. 复选框 / 任务（收进 :not(.opal-tasks-native) 便于回退）
@@ -1385,11 +1385,11 @@ body:not(.opal-tasks-native) .task-list-item[data-task="9"] > input.task-list-it
    8. Canvas / 背景纹理
    ===================================================================== */
 /* Canvas：底色/点阵走原生变量（不自绘，避免和 Obsidian 点阵重影）；卡片 squircle + 语义左条；
-   6 号预设色映射 Opal（注意 --canvas-color 用逗号三元组，供 rgb()/rgba() legacy 语法）；编组框靛蓝虚线 */
+   6 组预设色用合法 CSS 颜色映射 Opal；编组框靛蓝虚线 */
 .canvas-wrapper{--canvas-background:var(--o-mantle);--canvas-dot-pattern:var(--o-surface1)}
-.theme-dark .canvas-wrapper{--canvas-color-1:240,138,160;--canvas-color-2:242,174,123;--canvas-color-3:235,208,138;--canvas-color-4:146,219,168;--canvas-color-5:130,207,230;--canvas-color-6:192,162,240}
-.theme-light .canvas-wrapper{--canvas-color-1:177,58,86;--canvas-color-2:148,86,29;--canvas-color-3:123,98,20;--canvas-color-4:40,114,68;--canvas-color-5:14,110,130;--canvas-color-6:123,71,192}
-.canvas-node-container{border-radius:var(--radius-m);border-left:3px solid rgb(var(--canvas-color,126,126,126))}
+.theme-dark .canvas-wrapper{--canvas-color-1:rgb(240 138 160);--canvas-color-2:rgb(242 174 123);--canvas-color-3:rgb(235 208 138);--canvas-color-4:rgb(146 219 168);--canvas-color-5:rgb(130 207 230);--canvas-color-6:rgb(192 162 240)}
+.theme-light .canvas-wrapper{--canvas-color-1:rgb(177 58 86);--canvas-color-2:rgb(148 86 29);--canvas-color-3:rgb(123 98 20);--canvas-color-4:rgb(40 114 68);--canvas-color-5:rgb(14 110 130);--canvas-color-6:rgb(123 71 192)}
+.canvas-node-container{border-radius:var(--radius-m);border-left:3px solid var(--canvas-color,rgb(126 126 126))}
 @supports (corner-shape: superellipse(1.2)){.opal-corner-squircle .canvas-node-container{corner-shape:var(--o-cshape)}}
 .canvas-node-label{color:var(--o-subtext0)}
 .canvas-node-group{border:2px dashed var(--o-indigo);border-radius:var(--radius-m)}
@@ -1733,7 +1733,7 @@ body:not(.opal-tasks-native) .HyperMD-task-line[data-task="*"] .task-list-item-c
   .opal-pf-mono .markdown-rendered{font-family:var(--o-fallback-mono)}
   .opal-pa-justify .markdown-rendered p{text-align:justify;text-indent:2em;hyphens:auto}
   .opal-pa-left .markdown-rendered p{text-align:left;text-indent:0}
-  body:not(.opal-print-dark) .callout{box-shadow:none!important;background:#fff!important;border:1px solid #bbb!important;border-left:3px solid rgb(var(--callout-color))!important}
+  body:not(.opal-print-dark) .callout{box-shadow:none!important;background:#fff!important;border:1px solid #bbb!important;border-left:3px solid var(--callout-color)!important}
   .markdown-rendered :is(h1,h2,h3,h4,h5,h6){break-after:avoid;background-image:none!important}
   body:not(.opal-print-dark) .markdown-rendered :is(h1,h2,h3,h4,h5,h6){filter:saturate(.7) brightness(.55)}
   .markdown-rendered p,.markdown-rendered li{orphans:2;widows:2}
