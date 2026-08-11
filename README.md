@@ -20,7 +20,7 @@ A comprehensive, accessibility-checked theme for Obsidian, with a dual light/dar
 
 ## Requirements / 依赖
 
-- **Obsidian** 1.5.0+.
+- **Obsidian** 1.13.0+.
 - **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin — required to reach the ~82 configuration controls. The theme renders correctly with sensible defaults even without it, but the knobs live in Style Settings.
 
 ## Fonts / 字体
